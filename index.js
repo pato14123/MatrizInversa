@@ -1,5 +1,7 @@
 const express = require('express');
 
+const calculaMatriz = require('./calculaMatriz')
+
 const app = express();
 
 const port = 3000;
@@ -13,23 +15,23 @@ app.get('/', (req, res) => {
 app.post('/submit-form', (req, res) => {
     const { input1, input2, input3,input4 } = req.body;
 
-    var det = (input1 * input4) - (input2 * input3);
-    var resposta;
-    if(det != 0){
-        var input1Inv = input4;
-        var input4Inv = input1;
-        var input2Inv = -input2;
-        var input3Inv = -input3;
-        resposta = `<p>det: ${det}</p>
-                    <p>matriz inversa:<br>
-                    [${input1Inv} ${input2Inv}]<br>
-                    [${input3Inv} ${input4Inv}]</p>`
+    var info = calculaMatriz([input1, input2, input3, input4])
+
+    if(info[0])
+    {
+        resposta = `<p>det: ${info[1]}</p>
+            <p>matriz inversa:<br>
+            [${info[2]} ${info[3]}]<br>
+            [${info[4]} ${info[5]}]</p>`
     }
     else{
-        resposta = `<p>det: ${det} <br> não há matriz inversa</p>`;
+        resposta = `<p>det: ${det[1]} <br> não há matriz inversa</p>`;
     }
+
     res.send(resposta);
 });
+
+
 
 var server = app.listen( port || process.env.PORT , () =>{
     console.log(`Servidor rodando em ${process.env.PORT || port}`)

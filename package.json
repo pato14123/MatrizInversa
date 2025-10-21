@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "name": "matrizinversa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pato14123/MatrizInversa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pato14123/MatrizInversa/issues"
+  },
+  "homepage": "https://github.com/pato14123/MatrizInversa#readme"
 }
