@@ -7,7 +7,7 @@
       body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
       #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
-      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; width: 100px;}
       #input:focus { outline: none; }
       #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
 
@@ -17,26 +17,23 @@
     </style>
   </head>
   <body>
-    <h1>teste</h1>
+    <h1>Matriz inversa teste</h1>
     <ul id="messages"></ul>
     <form action="/submit-form" method="post">
      <div id="dv1">
       <div style="padding-left: 10px;">
-       <input style="width: 20px; height: 30px;" id="input1" name="input1" autocomplete="off" />
-       <input style="width: 20px; height: 30px;" id="input2" name="input2" autocomplete="off" />  
+       <input style="width: 50px; height: 30px;" id="input1" name="input1" autocomplete="off" type="number"/>
+       <input style="width: 50px; height: 30px;" id="input2" name="input2" autocomplete="off" type="number"/>  
       </div>  
       <div style="padding-left: 10px;">
-       <input style="width: 20px; height: 30px;" id="input3" name="input3" autocomplete="off" />
-       <input style="width: 20px; height: 30px;" id="input4" name="input4" autocomplete="off" />
+       <input style="width: 50px; height: 30px;" id="input3" name="input3" autocomplete="off" type="number"/>
+       <input style="width: 50px; height: 30px;" id="input4" name="input4" autocomplete="off" type="number"/>
        
       </div style="padding-left: 10px;">  
       <div>
         <button type="submit">Send</button>
       </div>
      </div>
-    </form>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
     </form>
     
   </body>
